@@ -18,7 +18,7 @@ class Movie < ApplicationRecord
 
   belongs_to(:director)
   has_many(:characters)
-  has_many(:cast, class_name: "Actor", through: :character, source: :movie)
+  has_many(:cast, class_name: "Actor", through: :character, source: :actor)
   
   # def director
   #   key = self.director_id
